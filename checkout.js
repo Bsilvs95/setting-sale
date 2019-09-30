@@ -1,5 +1,9 @@
-function selectSaleItems(items) {
-  return items
+function selectSaleItems(item) {
+  return item.discount > 0
 }
 
-module.exports = selectSaleItems
+
+function filterbyDiscount(items) {
+  return items.filter(selectSaleItems)
+}
+module.exports = filterbyDiscount
